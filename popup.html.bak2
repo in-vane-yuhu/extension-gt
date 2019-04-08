@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <title>BiUP -- 全球首家聚合交易所</title>
+    <!-- Bootstrap core CSS -->
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="static/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="static/css/jumbotron.css" rel="stylesheet">
+    <link href="static/css/login.css?v=0.0.0.2" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/swiper.min.css">
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="static/js/party/jquery.min.js"></script>
+    <script src="static/js/party/jquery.cookie.min.js"></script>
+    <script src="static/js/party/ie-emulation-modes-warning.js"></script>
+    <script src="static/js/party/base64.js"></script>
+    <script src="static/js/party/md5.js"></script>
+    <script src="static/js/party/jsencrypt.min.js"></script>
+    <script src="static/js/config.js"></script>
+    <script src="static/js/userdata.js"></script>
+     <script src="static/js/common/route.js"></script>
+    <script src="static/js/party/vue.js"></script>
+    <script src="static/js/common/utils.js"></script>
+    <script src="static/js/party/vue-i18n.js"></script>
+    <script src="static/js/lang.js"></script>
+    <script src='static/js/party/nprogress.js'></script>
+    <link type="text/css" href="//g.alicdn.com/sd/ncpc/nc.css?t=1507600041946" rel="stylesheet"/>
+    <script type="text/javascript" src="//g.alicdn.com/sd/ncpc/nc.js?t=1507600041946"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <my-header id="header"></my-header>
+    <div id='err_mes' class="err-mes" v-if='is_show_err'>
+        <err-mes :alert_type='alert_type' :mes='mes' :is_show='is_show_err'></err-mes>
+    </div>
+    <div class="news-con">
+        <div class="container login-container" id='login-app'>
+            <div class="row">
+                <div class="col-md-6 visible-md-inline-block visible-lg-inline-block" style="color: #7990E1;padding-top: 5em;padding-left: 5em;">
+                    <h3>
+                        {{$t("login.not_biup_users")}}
+                    </h3>
+                    <h4>{{$t("login.immediate_registrati")}}</h4>
+                    <a :href="R.url('reg')" class="btn btn-default my-btn-primary" style="color: white"> {{$t("login.free_registration")}} </a>
+                </div>
+                <div class="col-md-4">
+                    <login-form></login-form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <my-footer id='footer'></my-footer>
+    <!-- /container -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="static/js/party/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="static/js/party/ie10-viewport-bug-workaround.js"></script>
+    <script src="static/js/comm-server.js"></script>
+    <script src="static/js/comp.js"></script>
+    <script src="static/js/app-market.js?v=0.0.0.1"></script>
+    <script src="static/js/login/login.js?v=0.0.0.1"></script>
+</body>
+
+</html>
